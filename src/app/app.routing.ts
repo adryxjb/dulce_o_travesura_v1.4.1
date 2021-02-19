@@ -7,6 +7,7 @@ import { ProductosComponent } from "./components/productos/productos.component";
 import { RegistroComponent } from "./components/registro/registro.component";
 import { ContactoComponent } from "./components/contacto/contacto.component";
 import { ApiComponent } from "./components/api/api.component";
+import { UsuariosComponent } from "./components/usuarios/usuarios.component";
 
 //Rutas
 const appRoutes: Routes = [
@@ -17,6 +18,8 @@ const appRoutes: Routes = [
   { path: "registro", component: RegistroComponent },
   { path: "contacto", component: ContactoComponent },
   { path: "api", component: ApiComponent },
+  { path: "usuarios", component: UsuariosComponent },
+
   //Cuando se introduce una ruta que no existe:
   { path: "**", component: HomeComponent }
 ];

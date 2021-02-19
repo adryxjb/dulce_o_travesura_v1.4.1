@@ -12,6 +12,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { ProductosComponent } from "./components/productos/productos.component";
 import { RegistroComponent } from "./components/registro/registro.component";
 import { ApiComponent } from "./components/api/api.component";
+import { UsuariosComponent } from "./components/usuarios/usuarios.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ApiComponent } from "./components/api/api.component";
     HomeComponent,
     ProductosComponent,
     RegistroComponent,
-    ApiComponent
+    ApiComponent,
+    UsuariosComponent
   ],
   imports: [BrowserModule, FormsModule, routing, HttpClientModule],
   providers: [appRoutingProviders],
