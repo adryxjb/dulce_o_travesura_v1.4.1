@@ -2,7 +2,7 @@
 
 <div class="container">
   <table>
-    <tr *ngFor="let user in this.users">
+    <tr *ngFor="let user of this.users">
       <td>{{ user.name }}</td>
       <td>{{ user.username }}</td>
       <td>{{ user.address.city }}</td>
