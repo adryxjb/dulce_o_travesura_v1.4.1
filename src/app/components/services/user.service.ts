@@ -6,7 +6,7 @@ import { Usuario } from "../usuarios/usuario";
 
 @Injectable({ providedIn: "root" })
 export class UsuarioService {
-  public baseUrl = environment.apiUrl;
+  public baseUrl = environment.apiUrl + "users/";
 
   constructor(private _http: HttpClient) {
     console.log(this.baseUrl);
