@@ -30,6 +30,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   getUser(userid: string) {
+    this.user = null;
     this._usuarioService.getUser(userid).subscribe(
       (userFromAPI) => {
         console.log("userFromAPI: ", userFromAPI);
