@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-// import { Producto } from "./producto";
+import { Router, ActivatedRoute, Params } from "@angular/router";
+import { UsuarioService } from "../services/user.service";
+//import { Usuario } from "./usuario";
 
 @Component({
   selector: "usuariosComponent",
@@ -8,11 +10,22 @@ import { Component, OnInit } from "@angular/core";
 })
 export class UsuariosComponent implements OnInit {
   public titulo: string;
-  // public producto: Producto;
+  public parametro;
 
-  constructor() {
+  constructor(
+    private _usuarioService: UsuarioService,
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) {
     this.titulo = "Usuarios";
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._route.params.forEach((params: Params) => {
+      this.parametro = params["id"];
+    });
+    console.log("Parametro: ", this.parametro);
+  }
+
+  getUser(userid: string) {}
 }

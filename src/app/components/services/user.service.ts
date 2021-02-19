@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 import { Usuario } from "../usuarios/usuario";
 
 @Injectable({ providedIn: "root" })
-export class UsuariosService {
+export class UsuarioService {
   public baseUrl = environment.apiUrl;
 
   constructor(private _http: HttpClient) {
@@ -13,6 +13,7 @@ export class UsuariosService {
   }
 
   getUser(userId: string): Observable<Usuario> {
-    const url = this.baseUrl;
+    const url = this.baseUrl + userId;
+    return this._http.get<Usuario>(url);
   }
 }
