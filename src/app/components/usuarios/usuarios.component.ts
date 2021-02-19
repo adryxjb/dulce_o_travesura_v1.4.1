@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 // import { Producto } from "./producto";
 
 @Component({
@@ -6,12 +6,13 @@ import { Component } from "@angular/core";
   templateUrl: "./usuarios.component.html",
   styleUrls: ["./usuarios.component.css"]
 })
-export class UsuariosComponent {
+export class UsuariosComponent implements OnInit {
   public titulo: string;
   // public producto: Producto;
 
   constructor() {
     this.titulo = "Usuarios";
-    // this.producto = new Producto("Helado de fresa", 189, "Helados", true);
   }
+
+  ngOnInit() {}
 }

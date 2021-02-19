@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 
 @Component({
@@ -27,6 +27,4 @@ export class ApiComponent {
       }
     );
   }
-
-  OnInit() {}
 }
