@@ -1,12 +1,18 @@
 import { Injectable } from "@angular/core";
 import { environment } from "../../../environments/environment";
 import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Usuario } from "../usuarios/usuario";
 
 @Injectable({ providedIn: "root" })
-export class UsersService {
+export class UsuariosService {
   public baseUrl = environment.apiUrl;
 
-  constructor() {
+  constructor(private _http: HttpClient) {
     console.log(this.baseUrl);
+  }
+
+  getUser(userId: string): Observable<Usuario> {
+    const url = this.baseUrl;
   }
 }

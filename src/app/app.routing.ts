@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   { path: "registro", component: RegistroComponent },
   { path: "contacto", component: ContactoComponent },
   { path: "api", component: ApiComponent },
-  { path: "usuarios", component: UsuariosComponent },
+  { path: "usuarios/:id", component: UsuariosComponent },
 
   //Cuando se introduce una ruta que no existe:
   { path: "**", component: HomeComponent }
