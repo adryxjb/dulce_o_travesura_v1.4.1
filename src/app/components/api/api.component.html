@@ -2,10 +2,19 @@
 
 <div class="container">
   <table class="table table-sm">
-    <tr *ngFor="let user of this.users">
-      <td>{{ user.name }}</td>
-      <td>{{ user.username }}</td>
-      <td>{{ user.address.city }}</td>
-    </tr>
+    <thead style="color: #13505b; font-size: 20px;">
+      <tr>
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody style="color: #1d7787; font-size: 18px;">
+      <tr *ngFor="let user of this.users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.address.city }}</td>
+      </tr>
+    </tbody>
   </table>
 </div>
